@@ -5,372 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – Dozen AI</title>
   <style>
-    /* ── Reset & base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-                   'Helvetica Neue', Arial, sans-serif;
-      font-size: 15px;
-      line-height: 1.7;
-      color: #1e293b;
-      background: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 15px; line-height: 1.7; color: #1e293b; background: #f8fafc;
     }
-
-    /* ── Top meta bar ─────────────────────────────────────────── */
     .meta-bar {
       background: linear-gradient(135deg, #0d0b1a 0%, #1a0d35 100%);
-      color: #c4b5fd;
-      padding: 12px 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 12.5px;
-      border-bottom: 2px solid #6e40cf;
+      color: #c4b5fd; padding: 12px 24px; display: flex; flex-wrap: wrap;
+      gap: 18px; font-size: 12.5px; border-bottom: 2px solid #6e40cf;
     }
     .meta-bar strong { color: #e9d5ff; }
-
-    /* ── Page header ──────────────────────────────────────────── */
     .page-header {
       background: linear-gradient(135deg, #0d0b1a 0%, #1a0d35 60%, #2d1060 100%);
-      padding: 48px 24px 40px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+      padding: 48px 24px 40px; text-align: center; position: relative; overflow: hidden;
     }
     .page-header::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background: radial-gradient(ellipse at 30% 50%, rgba(110,64,207,.25) 0%, transparent 70%),
                   radial-gradient(ellipse at 70% 50%, rgba(217,70,239,.15) 0%, transparent 70%);
     }
-    .page-header h1 {
-      position: relative;
-      font-size: clamp(24px, 5vw, 38px);
-      font-weight: 800;
-      color: #fff;
-      letter-spacing: -0.5px;
-    }
-    .page-header .tagline {
-      position: relative;
-      color: #c4b5fd;
-      font-size: 14px;
-      margin-top: 6px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    .pill-badge {
-      display: inline-block;
-      margin-top: 14px;
-      background: linear-gradient(135deg, #6e40cf, #d946ef);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      padding: 5px 16px;
-      border-radius: 20px;
-      position: relative;
-    }
-
-    /* ── Main container ───────────────────────────────────────── */
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 32px 20px 60px;
-    }
-
-    /* ── Table of Contents ────────────────────────────────────── */
-    .toc {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-left: 4px solid #6e40cf;
-      border-radius: 12px;
-      padding: 24px 28px;
-      margin-bottom: 36px;
-      box-shadow: 0 2px 12px rgba(0,0,0,.06);
-    }
-    .toc h2 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #6e40cf;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 14px;
-      border: none;
-    }
+    .page-header h1 { position: relative; font-size: clamp(24px,5vw,38px); font-weight: 800; color: #fff; letter-spacing: -.5px; }
+    .page-header .tagline { position: relative; color: #c4b5fd; font-size: 14px; margin-top: 6px; letter-spacing: 2px; text-transform: uppercase; }
+    .pill-badge { display: inline-block; margin-top: 14px; background: linear-gradient(135deg,#6e40cf,#d946ef); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1px; padding: 5px 16px; border-radius: 20px; position: relative; }
+    .container { max-width: 860px; margin: 0 auto; padding: 32px 20px 60px; }
+    .toc { background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid #6e40cf; border-radius: 12px; padding: 24px 28px; margin-bottom: 36px; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
+    .toc h2 { font-size: 15px; font-weight: 700; color: #6e40cf; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; border: none; }
     .toc h2::before { display: none; }
-    .toc ol {
-      padding-left: 18px;
-      column-count: 2;
-      column-gap: 24px;
-    }
+    .toc ol { padding-left: 18px; column-count: 2; column-gap: 24px; }
     .toc li { margin-bottom: 6px; font-size: 13.5px; }
     .toc a { color: #7c3aed; text-decoration: none; }
     .toc a:hover { text-decoration: underline; }
-
-    /* ── Section headings ─────────────────────────────────────── */
     section { margin-bottom: 40px; }
-    section h2 {
-      font-size: 19px;
-      font-weight: 800;
-      color: #0d0b1a;
-      border-bottom: 2px solid #ede9fe;
-      padding-bottom: 8px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px; height: 28px;
-      background: linear-gradient(135deg, #6e40cf, #d946ef);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 800;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
+    section h2 { font-size: 19px; font-weight: 800; color: #0d0b1a; border-bottom: 2px solid #ede9fe; padding-bottom: 8px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+    .num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: linear-gradient(135deg,#6e40cf,#d946ef); color: #fff; font-size: 12px; font-weight: 800; border-radius: 50%; flex-shrink: 0; }
     p { margin-bottom: 12px; }
     ul, ol { padding-left: 22px; margin-bottom: 14px; }
     li { margin-bottom: 6px; }
-
-    /* ── Highlight / callout box ──────────────────────────────── */
-    .highlight-box {
-      background: linear-gradient(135deg, #f5f3ff, #fdf4ff);
-      border: 1px solid #c4b5fd;
-      border-left: 4px solid #7c3aed;
-      border-radius: 10px;
-      padding: 16px 20px;
-      color: #4c1d95;
-      font-size: 14px;
-      font-weight: 500;
-      margin: 18px 0;
-      line-height: 1.6;
-    }
-
-    .info-box {
-      background: #f0fdf4;
-      border: 1px solid #bbf7d0;
-      border-left: 4px solid #22c55e;
-      border-radius: 10px;
-      padding: 14px 18px;
-      color: #14532d;
-      font-size: 13.5px;
-      margin: 14px 0;
-    }
-
-    /* ── Data table ───────────────────────────────────────────── */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13.5px;
-      margin: 16px 0 20px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,.07);
-    }
-    .data-table thead tr {
-      background: linear-gradient(135deg, #0d0b1a, #1a0d35);
-      color: #e9d5ff;
-    }
-    .data-table th {
-      padding: 12px 14px;
-      text-align: left;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
+    .highlight-box { background: linear-gradient(135deg,#f5f3ff,#fdf4ff); border: 1px solid #c4b5fd; border-left: 4px solid #7c3aed; border-radius: 10px; padding: 16px 20px; color: #4c1d95; font-size: 14px; font-weight: 500; margin: 18px 0; line-height: 1.6; }
+    .info-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #22c55e; border-radius: 10px; padding: 14px 18px; color: #14532d; font-size: 13.5px; margin: 14px 0; }
+    .warn-box { background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid #f59e0b; border-radius: 10px; padding: 14px 18px; color: #78350f; font-size: 13.5px; margin: 14px 0; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 16px 0 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.07); }
+    .data-table thead tr { background: linear-gradient(135deg,#0d0b1a,#1a0d35); color: #e9d5ff; }
+    .data-table th { padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; letter-spacing: .5px; text-transform: uppercase; }
     .data-table tbody tr:nth-child(even) { background: #faf5ff; }
     .data-table tbody tr:nth-child(odd)  { background: #fff; }
     .data-table tbody tr:hover { background: #f3e8ff; }
-    .data-table td {
-      padding: 11px 14px;
-      border-bottom: 1px solid #ede9fe;
-      vertical-align: top;
-    }
-
-    /* ── Permissions table ────────────────────────────────────── */
-    .perm-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-      margin: 16px 0 20px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,.07);
-    }
-    .perm-table thead tr {
-      background: #1e1b4b;
-      color: #c7d2fe;
-    }
-    .perm-table th {
-      padding: 10px 14px;
-      text-align: left;
-      font-size: 11.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+    .data-table td { padding: 11px 14px; border-bottom: 1px solid #ede9fe; vertical-align: top; }
+    .perm-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.07); }
+    .perm-table thead tr { background: #1e1b4b; color: #c7d2fe; }
+    .perm-table th { padding: 10px 14px; text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .5px; }
     .perm-table tbody tr:nth-child(even) { background: #f8faff; }
     .perm-table tbody tr:nth-child(odd)  { background: #fff; }
-    .perm-table td {
-      padding: 10px 14px;
-      border-bottom: 1px solid #e0e7ff;
-      vertical-align: top;
-    }
-    .perm-name {
-      font-family: 'Courier New', monospace;
-      font-size: 11.5px;
-      color: #4338ca;
-      background: #eef2ff;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    /* ── Badges ───────────────────────────────────────────────── */
-    .badge-yes {
-      display: inline-block;
-      background: #fef3c7;
-      color: #92400e;
-      border: 1px solid #fde68a;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 9px;
-      border-radius: 12px;
-    }
-    .badge-no {
-      display: inline-block;
-      background: #d1fae5;
-      color: #065f46;
-      border: 1px solid #a7f3d0;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 9px;
-      border-radius: 12px;
-    }
-    .badge-local {
-      display: inline-block;
-      background: #ede9fe;
-      color: #5b21b6;
-      border: 1px solid #c4b5fd;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 9px;
-      border-radius: 12px;
-    }
-
-    /* ── Third-party cards ────────────────────────────────────── */
-    .third-party-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-      margin: 16px 0;
-    }
-    .third-party-card {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-top: 3px solid #7c3aed;
-      border-radius: 10px;
-      padding: 18px 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.05);
-    }
-    .third-party-card h3 {
-      font-size: 14px;
-      font-weight: 800;
-      color: #1e293b;
-      margin-bottom: 6px;
-    }
-    .third-party-card p {
-      font-size: 12.5px;
-      color: #475569;
-      margin-bottom: 6px;
-    }
-    .third-party-card a {
-      font-size: 12px;
-      font-weight: 700;
-      color: #7c3aed;
-      text-decoration: none;
-    }
+    .perm-table td { padding: 10px 14px; border-bottom: 1px solid #e0e7ff; vertical-align: top; }
+    .perm-name { font-family: 'Courier New', monospace; font-size: 11.5px; color: #4338ca; background: #eef2ff; padding: 2px 6px; border-radius: 4px; }
+    .badge-yes { display: inline-block; background: #fef3c7; color: #92400e; border: 1px solid #fde68a; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
+    .badge-no  { display: inline-block; background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
+    .badge-local { display: inline-block; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
+    .badge-firebase { display: inline-block; background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
+    .third-party-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 16px; margin: 16px 0; }
+    .third-party-card { background: #fff; border: 1px solid #e2e8f0; border-top: 3px solid #7c3aed; border-radius: 10px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    .third-party-card h3 { font-size: 14px; font-weight: 800; color: #1e293b; margin-bottom: 6px; }
+    .third-party-card p { font-size: 12.5px; color: #475569; margin-bottom: 6px; }
+    .third-party-card a { font-size: 12px; font-weight: 700; color: #7c3aed; text-decoration: none; }
     .third-party-card a:hover { text-decoration: underline; }
-
-    /* ── Ad type chips ────────────────────────────────────────── */
-    .ad-chip {
-      display: inline-block;
-      background: linear-gradient(135deg, #6e40cf, #d946ef);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 12px;
-      margin: 2px;
-    }
-
-    /* ── Contact box ──────────────────────────────────────────── */
-    .contact-box {
-      background: linear-gradient(135deg, #0d0b1a, #1a0d35);
-      border-radius: 14px;
-      padding: 28px 30px;
-      color: #c4b5fd;
-    }
-    .contact-box h3 {
-      font-size: 17px;
-      font-weight: 800;
-      color: #fff;
-      margin-bottom: 12px;
-    }
+    .ad-chip { display: inline-block; background: linear-gradient(135deg,#6e40cf,#d946ef); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 12px; margin: 2px; }
+    .contact-box { background: linear-gradient(135deg,#0d0b1a,#1a0d35); border-radius: 14px; padding: 28px 30px; color: #c4b5fd; }
+    .contact-box h3 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 12px; }
     .contact-box p { font-size: 14px; margin-bottom: 8px; }
     .contact-box strong { color: #e9d5ff; }
     .contact-box a { color: #a78bfa; }
     .contact-box a:hover { color: #c4b5fd; }
-
-    /* ── Footer ───────────────────────────────────────────────── */
-    footer {
-      background: #0d0b1a;
-      color: #6b7280;
-      text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      border-top: 1px solid #1e1b4b;
-    }
+    footer { background: #0d0b1a; color: #6b7280; text-align: center; padding: 20px; font-size: 12px; border-top: 1px solid #1e1b4b; }
     footer span { color: #a78bfa; }
-
-    /* ── Responsive ───────────────────────────────────────────── */
     @media (max-width: 600px) {
       .meta-bar { flex-direction: column; gap: 6px; }
       .toc ol   { column-count: 1; }
       .third-party-grid { grid-template-columns: 1fr; }
       .data-table, .perm-table { font-size: 12px; }
-      .data-table th, .data-table td,
-      .perm-table th, .perm-table td { padding: 9px 10px; }
+      .data-table th, .data-table td, .perm-table th, .perm-table td { padding: 9px 10px; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── Meta bar ───────────────────────────────────────────────── -->
 <div class="meta-bar">
   <span><strong>App:</strong> Dozen AI</span>
   <span><strong>Package:</strong> com.dozenai.app</span>
   <span><strong>Platform:</strong> Android 7.0+ (API 24)</span>
   <span><strong>Effective Date:</strong> May 3, 2026</span>
-  <span><strong>Last Updated:</strong> May 3, 2026</span>
+  <span><strong>Last Updated:</strong> May 4, 2026</span>
 </div>
 
-<!-- ── Page header ────────────────────────────────────────────── -->
 <div class="page-header">
   <h1>Privacy Policy</h1>
-  <div class="tagline">Dozen AI &nbsp;·&nbsp; Track. Streak. Dominate.</div>
+  <div class="tagline">Dozen AI &nbsp;&middot;&nbsp; Track. Streak. Dominate.</div>
   <div class="pill-badge">com.dozenai.app</div>
 </div>
 
-<!-- ── Main content ───────────────────────────────────────────── -->
 <div class="container">
 
-  <!-- Table of Contents -->
   <div class="toc">
     <h2>Table of Contents</h2>
     <ol>
@@ -409,15 +143,16 @@
     <div class="highlight-box">
       Dozen AI does NOT require account registration. We do NOT collect your name, email
       address, phone number, or any personally identifiable information (PII) directly.
-      All core app data — tracked apps, groups, day counts, feedback — is stored
-      <strong>exclusively on your device</strong> and is never transmitted to any developer-owned server.
+      Core app data — tracked apps, groups, day counts, generated feedback — is stored
+      <strong>on your device</strong>. The app transmits limited, anonymous device-level
+      analytics to developer-owned Firebase services (described fully in Sections 2–5).
+      No data that could directly identify you as an individual is ever collected.
     </div>
   </section>
 
   <!-- 2. Information Collected -->
   <section id="information-collected">
     <h2><span class="num">2</span> Information We Collect</h2>
-
     <p>
       Dozen AI collects only the minimum information needed to function. The table below lists
       every category of data the app handles.
@@ -425,42 +160,57 @@
 
     <table class="data-table">
       <thead>
-        <tr>
-          <th>Data Type</th>
-          <th>What It Is</th>
-          <th>Purpose</th>
-          <th>Where Stored</th>
-          <th>Shared?</th>
-        </tr>
+        <tr><th>Data Type</th><th>What It Is</th><th>Purpose</th><th>Where Stored</th><th>Shared?</th></tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>Tracked App Records</strong></td>
           <td>App package names, display names, assigned group, day count, feedback dates, add timestamp</td>
-          <td>Core tracking functionality — display groups, day progress, streaks</td>
+          <td>Core tracking — display groups, day progress, streaks</td>
           <td><span class="badge-local">On-device (Room DB)</span></td>
           <td><span class="badge-no">Not Shared</span></td>
         </tr>
         <tr>
           <td><strong>App Usage History</strong></td>
           <td>Date strings per app entry, feedback-done flag per date</td>
-          <td>Display day-wise history cards; track whether feedback was generated per day</td>
+          <td>Display day-wise history cards; track feedback completion per day</td>
           <td><span class="badge-local">On-device (Room DB)</span></td>
           <td><span class="badge-no">Not Shared</span></td>
         </tr>
         <tr>
           <td><strong>User Preferences</strong></td>
-          <td>Reminder on/off toggles, day-start timestamps, onboarding status, update cache (version strings only)</td>
-          <td>Maintain your notification settings and group timing across app restarts</td>
+          <td>Reminder on/off toggles, day-start timestamps, onboarding status, update cache</td>
+          <td>Maintain notification settings and group timing across restarts</td>
           <td><span class="badge-local">On-device (SharedPrefs)</span></td>
           <td><span class="badge-no">Not Shared</span></td>
         </tr>
         <tr>
           <td><strong>Generated Feedback Text</strong></td>
-          <td>16 day-wise AI-generated feedback sentences per app, stored as text files</td>
+          <td>16 day-wise AI-generated feedback sentences per app, stored as text</td>
           <td>Display in Feedback Viewer; copy to clipboard for testers</td>
           <td><span class="badge-local">On-device (Files)</span></td>
           <td><span class="badge-no">Not Shared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Installation Analytics</strong></td>
+          <td>Anonymous device ID (Android ID hex), device model, OS version, app version, first-install timestamp, last-seen timestamp</td>
+          <td>Developer analytics — understand install reach, OS distribution, app version adoption. Transmitted to developer-owned Firebase Realtime Database.</td>
+          <td><span class="badge-firebase">Firebase RTDB (Developer)</span></td>
+          <td><span class="badge-no">Not Shared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Feedback Usage Analytics</strong></td>
+          <td>Total "Get Feedback" use count per device, first/last use timestamps, per-use events: group name, app count, whether daily limit was exceeded</td>
+          <td>Developer analytics — track feature adoption and usage patterns. Transmitted to developer-owned Firebase Realtime Database.</td>
+          <td><span class="badge-firebase">Firebase RTDB (Developer)</span></td>
+          <td><span class="badge-no">Not Shared</span></td>
+        </tr>
+        <tr>
+          <td><strong>App Analytics Events</strong></td>
+          <td>Standard events: first_open, session_start, screen_view, user_engagement, app_remove. Custom event: get_feedback_used (group name, app count, exceeded-limit flag)</td>
+          <td>Firebase Analytics — understand user engagement, retention, and feature usage at aggregate level</td>
+          <td><span class="badge-firebase">Firebase Analytics (Google)</span></td>
+          <td><span class="badge-yes">Google</span></td>
         </tr>
         <tr>
           <td><strong>Advertising ID (GAID)</strong></td>
@@ -472,19 +222,27 @@
         <tr>
           <td><strong>Ad Interaction Data</strong></td>
           <td>Ad impressions, clicks, view-through events</td>
-          <td>Collected exclusively by the AdMob SDK for ad billing and optimisation</td>
+          <td>Collected by AdMob SDK for ad billing and optimisation</td>
           <td><span class="badge-yes">Google AdMob</span></td>
           <td><span class="badge-yes">Google</span></td>
         </tr>
         <tr>
           <td><strong>Google Sign-In Session</strong></td>
-          <td>Google account session used within the app for generating feedback of Apps</td>
-          <td>Used only within the in-app Google sign-in flow to authenticate AI feedback requests; never read, stored, or transmitted by the app outside this flow</td>
+          <td>Google account session for generating feedback of Apps</td>
+          <td>Used only within the in-app sign-in flow to authenticate AI feedback requests; never read or transmitted outside this flow</td>
           <td><span class="badge-local">On-device only</span></td>
           <td><span class="badge-no">Not Shared</span></td>
         </tr>
       </tbody>
     </table>
+
+    <div class="warn-box">
+      <strong>About the device identifier used for analytics:</strong> The app uses the Android ID
+      (a hex string, e.g. <code>628c54d571f6f5a6</code>) as an anonymous device key for Firebase
+      analytics. This ID is stable per device per app installation and is NOT the same as the
+      advertising ID (GAID). It is not linked to your name, email address, or any other PII.
+      Clearing the app's data or reinstalling will generate or reassign this identifier.
+    </div>
 
     <p><strong>We do NOT collect any of the following:</strong></p>
     <ul>
@@ -493,7 +251,7 @@
       <li>Camera, microphone, or media files</li>
       <li>Contacts, calendar, or SMS data</li>
       <li>Biometric data of any kind</li>
-      <li>Financial or payment information (no in-app purchases in this app)</li>
+      <li>Financial or payment information (no in-app purchases)</li>
       <li>Any data that could directly identify you as an individual</li>
     </ul>
   </section>
@@ -505,21 +263,19 @@
     <ul>
       <li>
         <strong>Core tracking functionality</strong> — storing your tracked app entries,
-        group assignments, day counts, and usage history locally on your device so you can
-        monitor your testing regularity.
+        group assignments, day counts, and usage history locally on your device.
       </li>
       <li>
         <strong>Daily reminders</strong> — using locally stored reminder toggle states to
-        schedule morning, afternoon, and night notification alarms at the correct times
-        via Android's alarm system, without any server involvement.
+        schedule morning, afternoon, and night notification alarms via Android's alarm system.
       </li>
       <li>
         <strong>AI feedback generation</strong> — using Google sign-in for generating feedback
         of Apps to generate and store feedback text locally on your device.
       </li>
       <li>
-        <strong>App version checking</strong> — checking publicly available version information
-        to compare against installed app versions. No user data is transmitted.
+        <strong>App version checking</strong> — checking publicly available Play Store version
+        information. No user data is transmitted.
       </li>
       <li>
         <strong>Serving advertisements</strong> — the Google AdMob SDK uses your Advertising
@@ -528,14 +284,21 @@
       </li>
       <li>
         <strong>Rewarded ad gate</strong> — a daily counter (stored in SharedPreferences) tracks
-        how many times you have used the "Get Feedback" feature today. After 2 free uses, you
-        may watch a rewarded ad to unlock additional uses. This counter is stored entirely on-device.
+        "Get Feedback" uses. After 2 free uses, you may watch a rewarded ad for additional uses.
+      </li>
+      <li>
+        <strong>Developer analytics (Firebase)</strong> — anonymous device-level data (install
+        heartbeat, feature usage counts, app version distribution) is sent to the developer's
+        Firebase Realtime Database and Firebase Analytics to understand app health, engagement,
+        and adoption. No PII is included. This data is used solely by the developer for app
+        improvement.
       </li>
     </ul>
     <div class="info-box">
       We do <strong>not</strong> sell your data. We do <strong>not</strong> share your data
-      with any third party other than Google AdMob (via its SDK) as described above. We
-      operate no backend server that receives any app usage data from your device.
+      with any third party for commercial purposes. Firebase Realtime Database data is stored
+      in the developer's own project and is not accessible to other third parties. Firebase
+      Analytics data is processed by Google under their own Privacy Policy.
     </div>
   </section>
 
@@ -544,29 +307,40 @@
     <h2><span class="num">4</span> Data Storage &amp; Retention</h2>
     <p>
       <strong>On-Device SQLite Database (Room):</strong> All tracked app records and usage
-      history are stored in a local SQLite database on your device managed by Android Room.
-      The schema contains two tables: <em>tracked_apps</em> (app entries, groups, day counts)
-      and <em>app_history</em> (date-level usage records). This data never leaves your device.
+      history are stored in a local SQLite database managed by Android Room. This data never
+      leaves your device.
     </p>
     <p>
       <strong>On-Device SharedPreferences:</strong> Reminder settings, day-start timestamps,
-      onboarding completion flag, and cached Play Store version data (version strings only) are
-      stored in Android SharedPreferences. No personal data is included.
+      onboarding completion flag, and cached Play Store version data are stored in Android
+      SharedPreferences. No personal data is included.
     </p>
     <p>
       <strong>On-Device Files:</strong> Generated feedback text (up to 16 sentences per tracked
-      app, per group) is stored as text data in the app's private file storage. This data is
-      only accessible to the app and is deleted when the app is uninstalled.
+      app, per group) is stored in the app's private file storage. Deleted on uninstall.
+    </p>
+    <p>
+      <strong>Firebase Realtime Database (Developer-Owned):</strong> Anonymous device analytics
+      data (install heartbeat, feedback usage counts) are transmitted to the developer's Firebase
+      Realtime Database. Data is stored
+      keyed by Android ID (hex). The developer retains this data indefinitely for analytics
+      purposes. Firebase's infrastructure is operated by Google.
+    </p>
+    <p>
+      <strong>Firebase Analytics (Google):</strong> Standard and custom analytics events are
+      processed by Firebase Analytics. Data is retained by Google under their default Analytics
+      retention settings (up to 14 months). See
+      <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
     </p>
     <p>
       <strong>AdMob / Google:</strong> The Google AdMob SDK transmits your Advertising ID and
       ad interaction data to Google's servers in accordance with
       <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
-      This data is retained by Google under their own policies, which Dozen AI does not control.
     </p>
     <p>
-      <strong>Retention:</strong> All on-device data is retained until you uninstall the app.
-      There is no automatic expiry. No developer-side server retains any user data.
+      <strong>Retention of on-device data:</strong> Retained until you uninstall the app or
+      clear app data. Firebase RTDB data is retained by the developer indefinitely but contains
+      no PII and cannot be linked back to an individual without the device.
     </p>
   </section>
 
@@ -574,8 +348,7 @@
   <section id="third-party">
     <h2><span class="num">5</span> Third-Party Services</h2>
     <p>
-      Dozen AI integrates a small number of third-party services. Each service operates under
-      its own privacy policy. The table below summarises what each service accesses:
+      Dozen AI integrates the following services. Each operates under its own privacy policy.
     </p>
 
     <div class="third-party-grid">
@@ -583,42 +356,36 @@
       <div class="third-party-card">
         <h3>Google AdMob</h3>
         <p><em>SDK: play-services-ads 23.6.0</em></p>
-        <p>
-          Displays advertisements (banner, interstitial, app open, native, and rewarded video).
-          Accessed on: main screen, group room, feedback viewer, and completion screens.
-        </p>
-        <p>
-          May collect: Advertising ID (GAID), device model/OS version, ad interaction events,
-          app usage signals.
-        </p>
-        <a href="https://policies.google.com/privacy" target="_blank">
-          Google Privacy Policy →
-        </a>
+        <p>Displays advertisements (banner, interstitial, app open, native, rewarded video). May collect: Advertising ID (GAID), device model/OS, ad interaction events.</p>
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy &rarr;</a>
+      </div>
+
+      <div class="third-party-card">
+        <h3>Firebase Realtime Database</h3>
+        <p><em>REST API — no SDK. Developer-owned project: dozenai</em></p>
+        <p>Receives anonymous install heartbeat and Get Feedback usage analytics keyed by Android ID (hex). No PII is stored. Data is write-only from the app — the app cannot read back any stored data.</p>
+        <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy &rarr;</a>
+      </div>
+
+      <div class="third-party-card">
+        <h3>Firebase Analytics</h3>
+        <p><em>SDK: firebase-analytics (BOM 33.7.0). Developer-owned project: dozenai</em></p>
+        <p>Tracks standard engagement events (first_open, session_start, screen_view) and one custom event: <em>get_feedback_used</em> (group name, app count, limit-exceeded flag). No PII is included.</p>
+        <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy &rarr;</a>
       </div>
 
       <div class="third-party-card">
         <h3>Google Sign-In (AI Feedback)</h3>
-        <p><em>Used for generating feedback of Apps — no SDK</em></p>
-        <p>
-          The "Get Feedback" feature uses Google sign-in for generating feedback of Apps.
-          You sign in with your own Google account inside the app. The app does not read,
-          store, or transmit your password or credentials. Your interactions are governed
-          by Google's Terms of Service.
-        </p>
-        <a href="https://policies.google.com/privacy" target="_blank">
-          Google Privacy Policy →
-        </a>
+        <p><em>WebView-based — no SDK</em></p>
+        <p>Used for generating feedback of Apps. You sign in with your own Google account inside the app. The app does not read, store, or transmit your password or credentials.</p>
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy &rarr;</a>
       </div>
 
       <div class="third-party-card">
         <h3>AndroidX WorkManager</h3>
         <p><em>SDK: androidx.work:work-runtime-ktx 2.9.1</em></p>
-        <p>
-          Used to schedule periodic background reminder checks. WorkManager is an on-device
-          library and does not transmit any data to external servers.
-        </p>
-        <a href="https://developer.android.com/topic/libraries/architecture/workmanager"
-           target="_blank">WorkManager Docs →</a>
+        <p>Used to schedule periodic background reminder checks. On-device only — does not transmit any data to external servers.</p>
+        <a href="https://developer.android.com/topic/libraries/architecture/workmanager" target="_blank">WorkManager Docs &rarr;</a>
       </div>
 
     </div>
@@ -638,30 +405,25 @@
       <span class="ad-chip">Native</span>
       <span class="ad-chip">Rewarded Video</span>
     </p>
-    <ul style="margin-top:14px;">
+    <ul style="margin-top:14px">
       <li><strong>Banner ads</strong> appear at the bottom of the main screen, group room, and feedback viewer.</li>
       <li><strong>Interstitial ads</strong> appear before the Feedback Viewer opens.</li>
-      <li><strong>App Open ads</strong> appear on cold start (with a 10-minute cooldown between shows).</li>
+      <li><strong>App Open ads</strong> appear on cold start (10-minute cooldown between shows).</li>
       <li><strong>Native ads</strong> appear inline after every 3 group tiles on the main screen, and after every 4 feedback day-cards in the Feedback Viewer.</li>
-      <li><strong>Rewarded video ads</strong> are optional — you may watch one to unlock additional "Get Feedback" uses after your 2 free daily uses are exhausted.</li>
+      <li><strong>Rewarded video ads</strong> are optional — watch one to unlock additional "Get Feedback" uses after your 2 free daily uses are exhausted.</li>
     </ul>
-
     <p>
-      AdMob may use your <strong>Advertising ID (GAID)</strong> to show personalised ads based
-      on your interests. You can opt out of personalised advertising at any time:
+      AdMob may use your <strong>Advertising ID (GAID)</strong> to show personalised ads.
+      You can opt out at any time:
     </p>
     <ol>
-      <li>Open your device <strong>Settings</strong></li>
+      <li>Open device <strong>Settings</strong></li>
       <li>Tap <strong>Privacy</strong> (or <strong>Google</strong> &rarr; <strong>Ads</strong>)</li>
       <li>Enable <strong>"Opt out of Ads Personalisation"</strong></li>
     </ol>
-    <p>
-      You can also reset your Advertising ID from the same screen to generate a fresh anonymous
-      identifier unlinked from any previous ad history.
-    </p>
     <div class="info-box">
       The app does not show ads during active feedback generation or during Google sign-in
-      for generating feedback of Apps, to avoid interfering with critical user flows.
+      for generating feedback of Apps.
     </div>
   </section>
 
@@ -670,7 +432,7 @@
     <h2><span class="num">7</span> AI Feedback Feature</h2>
     <p>
       The "Get Feedback" feature generates 16 day-wise feedback sentences for each tracked app
-      using AI. Here is the data flow — every step is transparent:
+      using AI. Data flow:
     </p>
     <ol>
       <li>
@@ -683,85 +445,45 @@
         using your authenticated session. No personal information is included in the prompt.
       </li>
       <li>
-        <strong>Storage of response:</strong> The 16 feedback sentences returned by the AI are
-        stored locally on your device in the app's private file storage. They are never uploaded
-        to any server.
+        <strong>Storage of response:</strong> The 16 feedback sentences are stored locally on
+        your device. They are never uploaded to any server.
+      </li>
+      <li>
+        <strong>Usage analytics:</strong> After each "Get Feedback" use, an anonymous event is
+        sent to Firebase RTDB and Firebase Analytics recording: group name (user-chosen label),
+        number of apps in the group, and whether the daily free-use limit was exceeded. No
+        app names, package names, or feedback content is transmitted.
       </li>
     </ol>
     <div class="highlight-box">
       The app does <strong>not</strong> log, transmit, or store your Google account credentials,
-      password, or recovery information. Your Google sign-in session for generating feedback of
-      Apps is managed entirely on-device and is not accessible to any external party through
-      this app.
+      password, or recovery information. Your sign-in session is managed entirely on-device.
     </div>
   </section>
 
   <!-- 8. Permissions -->
   <section id="permissions">
     <h2><span class="num">8</span> App Permissions</h2>
-    <p>
-      Dozen AI requests the following Android permissions. Each permission is used only for
-      the specific purpose described:
-    </p>
-
+    <p>Dozen AI requests the following Android permissions:</p>
     <table class="perm-table">
-      <thead>
-        <tr>
-          <th>Permission</th>
-          <th>Why It Is Needed</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Permission</th><th>Why It Is Needed</th></tr></thead>
       <tbody>
-        <tr>
-          <td><span class="perm-name">INTERNET</span></td>
-          <td>Required for AdMob ads, app version checking, and Google sign-in for generating feedback of Apps.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">ACCESS_NETWORK_STATE</span></td>
-          <td>Checks whether the device has an active network connection before making any network request.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">POST_NOTIFICATIONS</span> (API 33+)</td>
-          <td>Displays daily reminder notifications (morning, afternoon, night) for tracked app usage. Requested at runtime — you can deny or revoke this permission at any time in Android Settings.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">RECEIVE_BOOT_COMPLETED</span></td>
-          <td>Restores scheduled reminder alarms after the device is restarted. Without this, reminders would stop working after a reboot.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">FOREGROUND_SERVICE</span></td>
-          <td>Runs a foreground service that monitors app usage tracking in the background with a persistent notification, as required by Android policy.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">FOREGROUND_SERVICE_DATA_SYNC</span></td>
-          <td>Declares the foreground service type for Android 14+ compliance.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span></td>
-          <td>Prompts you to exclude Dozen AI from battery optimisation so that reminders fire reliably at the correct time rather than being deferred by Android's Doze mode.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">SCHEDULE_EXACT_ALARM</span> / <span class="perm-name">USE_EXACT_ALARM</span></td>
-          <td>Schedules precise alarm times for morning, afternoon, and night reminder notifications so they fire exactly when configured.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">WAKE_LOCK</span></td>
-          <td>Required internally by AndroidX WorkManager to keep the CPU awake long enough to complete background reminder scheduling tasks.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">VIBRATE</span></td>
-          <td>Enables vibration for reminder notifications.</td>
-        </tr>
-        <tr>
-          <td><span class="perm-name">com.google.android.gms.permission.AD_ID</span></td>
-          <td>Required by the Google AdMob SDK to access the Android Advertising ID for ad personalisation. You can reset or opt out of this in Android Settings &rarr; Privacy &rarr; Ads.</td>
-        </tr>
+        <tr><td><span class="perm-name">INTERNET</span></td><td>Required for AdMob ads, Firebase analytics, app version checking, and Google sign-in for generating feedback of Apps.</td></tr>
+        <tr><td><span class="perm-name">ACCESS_NETWORK_STATE</span></td><td>Checks network connectivity before any network request.</td></tr>
+        <tr><td><span class="perm-name">POST_NOTIFICATIONS</span> (API 33+)</td><td>Displays daily reminder notifications. Requested at runtime — can be denied or revoked at any time.</td></tr>
+        <tr><td><span class="perm-name">RECEIVE_BOOT_COMPLETED</span></td><td>Restores scheduled reminder alarms after device restart.</td></tr>
+        <tr><td><span class="perm-name">FOREGROUND_SERVICE</span></td><td>Runs background tracking service with persistent notification, as required by Android policy.</td></tr>
+        <tr><td><span class="perm-name">FOREGROUND_SERVICE_DATA_SYNC</span></td><td>Declares foreground service type for Android 14+ compliance.</td></tr>
+        <tr><td><span class="perm-name">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span></td><td>Ensures reminders fire reliably rather than being deferred by Doze mode.</td></tr>
+        <tr><td><span class="perm-name">SCHEDULE_EXACT_ALARM</span> / <span class="perm-name">USE_EXACT_ALARM</span></td><td>Schedules precise alarm times for reminder notifications.</td></tr>
+        <tr><td><span class="perm-name">WAKE_LOCK</span></td><td>Required by AndroidX WorkManager for background reminder scheduling.</td></tr>
+        <tr><td><span class="perm-name">VIBRATE</span></td><td>Enables vibration for reminder notifications.</td></tr>
+        <tr><td><span class="perm-name">com.google.android.gms.permission.AD_ID</span></td><td>Required by Google AdMob SDK to access the Android Advertising ID for ad personalisation. You can reset or opt out in Android Settings &rarr; Privacy &rarr; Ads.</td></tr>
       </tbody>
     </table>
-
     <p>
       Dozen AI does <strong>not</strong> request permissions for camera, microphone, location,
-      contacts, calendar, phone state, or any storage access beyond its own private app directory.
+      contacts, calendar, phone state, or any storage access beyond its own private directory.
     </p>
   </section>
 
@@ -770,87 +492,51 @@
     <h2><span class="num">9</span> Children's Privacy</h2>
     <p>
       Dozen AI is designed and intended for use by <strong>app developers and testers aged 13
-      and above</strong>. The app is a professional productivity tool for managing testing
-      workflows and is not directed at, designed for, or marketed to children under the age of 13.
+      and above</strong>. It is a professional productivity tool not directed at, designed for,
+      or marketed to children under the age of 13.
     </p>
     <p>
       We do not knowingly collect any personal information from children under 13. If you are
-      a parent or guardian and believe your child has used this app, you may contact us using
-      the details in Section 13. Upon verification, we will take appropriate steps to address
-      the situation.
+      a parent or guardian and believe your child has used this app, contact us using the
+      details in Section 13.
     </p>
     <p>
-      In accordance with the <strong>Children's Online Privacy Protection Act (COPPA)</strong>
-      and <strong>Google Play's Families Policy</strong>, this app is not listed in the Family
-      section of Google Play and carries a content rating for general audiences (developers
-      and testers).
+      In accordance with <strong>COPPA</strong> and <strong>Google Play's Families Policy</strong>,
+      this app is not listed in the Family section of Google Play.
     </p>
   </section>
 
   <!-- 10. Your Rights -->
   <section id="your-rights">
     <h2><span class="num">10</span> Your Rights &amp; Choices</h2>
-    <p>You have full control over the data Dozen AI stores on your device:</p>
+    <p>You have full control over the data Dozen AI stores:</p>
     <ul>
-      <li>
-        <strong>Delete all app data:</strong> Uninstall the app from your device. This permanently
-        removes all tracked app records, usage history, preferences, and generated feedback text.
-        Alternatively, go to Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Storage &rarr;
-        "Clear Data".
-      </li>
-      <li>
-        <strong>Revoke notification permission:</strong> Go to Android Settings &rarr; Apps &rarr;
-        Dozen AI &rarr; Notifications &rarr; toggle off. This disables all reminder notifications
-        but does not affect tracking or feedback functionality.
-      </li>
-      <li>
-        <strong>Opt out of personalised ads:</strong> Go to Android Settings &rarr; Privacy
-        (or Google) &rarr; Ads &rarr; "Opt out of Ads Personalisation". Non-personalised ads
-        will still be shown.
-      </li>
-      <li>
-        <strong>Reset your Advertising ID:</strong> Go to Android Settings &rarr; Privacy (or
-        Google) &rarr; Ads &rarr; "Reset Advertising ID" to unlink your device from any previous
-        ad-personalisation history.
-      </li>
-      <li>
-        <strong>Sign out of Google Account (AI Feedback):</strong> You can sign out of the
-        Google account used for generating feedback of Apps from within the app's sign-in
-        settings, or by clearing app data via Android Settings &rarr; Apps &rarr; Dozen AI
-        &rarr; Storage &rarr; "Clear Data".
-      </li>
-      <li>
-        <strong>Disable battery optimisation exemption:</strong> If you previously granted this,
-        you can revoke it via Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Battery &rarr;
-        "Optimised". Reminders may become less reliable after doing so.
-      </li>
+      <li><strong>Delete all on-device data:</strong> Uninstall the app, or go to Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Storage &rarr; "Clear Data".</li>
+      <li><strong>Opt out of Firebase analytics:</strong> Firebase analytics collection is tied to the app. To stop it, uninstall the app. There is no in-app toggle, as the data collected is anonymous and non-PII.</li>
+      <li><strong>Revoke notification permission:</strong> Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Notifications &rarr; toggle off.</li>
+      <li><strong>Opt out of personalised ads:</strong> Android Settings &rarr; Privacy (or Google) &rarr; Ads &rarr; "Opt out of Ads Personalisation".</li>
+      <li><strong>Reset your Advertising ID:</strong> Android Settings &rarr; Privacy (or Google) &rarr; Ads &rarr; "Reset Advertising ID".</li>
+	  <li><strong>Delete Feedback Data:</strong> Contact us at the email below to request deletion of your Feedback Feature usage records from Firebase. We will process your request within 30 days.</li>
+      <li><strong>Sign out of Google Account (AI Feedback):</strong> From within the app's sign-in settings, or by clearing app data.</li>
+      <li><strong>Disable battery optimisation exemption:</strong> Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Battery &rarr; "Optimised".</li>
     </ul>
   </section>
 
   <!-- 11. Data Security -->
   <section id="data-security">
     <h2><span class="num">11</span> Data Security</h2>
-    <p>We apply the following security measures to protect information handled by Dozen AI:</p>
+    <p>We apply the following security measures:</p>
     <ul>
-      <li>
-        All network communications — AdMob requests, version checking, Google sign-in for
-        generating feedback of Apps — use <strong>HTTPS/TLS encryption</strong>.
-      </li>
-      <li>
-        The app operates with <strong>no developer-owned backend server</strong>. There is no
-        database, API endpoint, or cloud function that receives your data. This means there is
-        no server-side data to breach.
-      </li>
-      <li>
-        On-device data (Room database, SharedPreferences, feedback files) is stored in the
-        app's private storage, which is not accessible to other apps on a non-rooted device.
-      </li>
+      <li>All network communications — AdMob requests, Firebase RTDB writes, Firebase Analytics events, version checking, Google sign-in — use <strong>HTTPS/TLS encryption</strong>.</li>
+      <li>Firebase RTDB security rules enforce write-only access from devices (no device can read back any other device's data) and validate all field types and sizes before accepting writes.</li>
+      <li>On-device data (Room database, SharedPreferences, feedback files) is stored in the app's private storage, inaccessible to other apps on a non-rooted device.</li>
     </ul>
-    <p>
+    <div class="warn-box">
       No method of data storage or transmission is 100% secure. We cannot guarantee absolute
-      security of data handled by third-party SDKs (AdMob, WebView) which are governed by
-      their own security practices.
-    </p>
+      security of data handled by third-party SDKs (AdMob, Firebase Analytics, WebView) which
+      are governed by their own security practices. Firebase RTDB stores only anonymous,
+      non-PII data, minimising the impact of any theoretical breach.
+    </div>
   </section>
 
   <!-- 12. Changes -->
@@ -863,11 +549,7 @@
     </p>
     <p>
       We encourage you to review this policy periodically. Continued use of Dozen AI after
-      any changes have been posted constitutes your acceptance of the updated policy.
-    </p>
-    <p>
-      The most current version of this Privacy Policy is always available at the URL you are
-      currently viewing (hosted on GitHub Pages or equivalent).
+      any changes constitutes your acceptance of the updated policy.
     </p>
   </section>
 
@@ -876,30 +558,25 @@
     <h2><span class="num">13</span> Contact Us</h2>
     <div class="contact-box">
       <h3>Questions about your privacy?</h3>
-      <p>
-        If you have any questions, concerns, or requests regarding this Privacy Policy or the
-        data practices of Dozen AI, please contact us:
-      </p>
+      <p>If you have questions, concerns, or requests regarding this Privacy Policy or the
+      data practices of Dozen AI, please contact us:</p>
       <p><strong>App Name:</strong> Dozen AI</p>
       <p><strong>Package:</strong> com.dozenai.app</p>
       <p><strong>Developer / Publisher:</strong> [EPICMIND LABS]</p>
       <p><strong>Email:</strong> <a href="mailto:EPICMINDLABS@Gmail.com">EPICMINDLABS@Gmail.com</a></p>
-      <p style="margin-top:14px; font-size:12.5px; color:#a78bfa;">
-        We will respond to all privacy-related enquiries within <strong style="color:#e9d5ff;">30 days</strong>.
+      <p style="margin-top:12px;font-size:13px;color:#a78bfa">
+        We will respond to all privacy-related enquiries within <strong style="color:#e9d5ff">30 days</strong>.
       </p>
     </div>
   </section>
 
 </div>
 
-<!-- ── Footer ─────────────────────────────────────────────────── -->
 <footer>
   <p>
-    &copy; 2026 <span>Dozen AI</span> &nbsp;·&nbsp; com.dozenai.app &nbsp;·&nbsp;
-    This policy is hosted on GitHub Pages and linked from Google Play Console.
-  </p>
-  <p style="margin-top:6px;">
-    Privacy Policy &nbsp;|&nbsp; Last Updated: May 3, 2026
+    &copy; 2026 <span>Dozen AI</span> &nbsp;&middot;&nbsp;
+    <span>com.dozenai.app</span> &nbsp;&middot;&nbsp;
+    Privacy Policy last updated May 4, 2026
   </p>
 </footer>
 
