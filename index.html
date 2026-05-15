@@ -45,6 +45,7 @@
     .highlight-box { background: linear-gradient(135deg,#f5f3ff,#fdf4ff); border: 1px solid #c4b5fd; border-left: 4px solid #7c3aed; border-radius: 10px; padding: 16px 20px; color: #4c1d95; font-size: 14px; font-weight: 500; margin: 18px 0; line-height: 1.6; }
     .info-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-left: 4px solid #22c55e; border-radius: 10px; padding: 14px 18px; color: #14532d; font-size: 13.5px; margin: 14px 0; }
     .warn-box { background: #fffbeb; border: 1px solid #fde68a; border-left: 4px solid #f59e0b; border-radius: 10px; padding: 14px 18px; color: #78350f; font-size: 13.5px; margin: 14px 0; }
+    .gold-box { background: linear-gradient(135deg,#fffbeb,#fef3c7); border: 1px solid #fcd34d; border-left: 4px solid #d97706; border-radius: 10px; padding: 16px 20px; color: #78350f; font-size: 13.5px; margin: 14px 0; line-height: 1.6; }
     .data-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 16px 0 20px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,.07); }
     .data-table thead tr { background: linear-gradient(135deg,#0d0b1a,#1a0d35); color: #e9d5ff; }
     .data-table th { padding: 12px 14px; text-align: left; font-weight: 700; font-size: 12px; letter-spacing: .5px; text-transform: uppercase; }
@@ -63,13 +64,17 @@
     .badge-no  { display: inline-block; background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
     .badge-local { display: inline-block; background: #ede9fe; color: #5b21b6; border: 1px solid #c4b5fd; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
     .badge-firebase { display: inline-block; background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
+    .badge-billing { display: inline-block; background: #fef3c7; color: #78350f; border: 1px solid #fcd34d; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
+    .badge-encrypted { display: inline-block; background: #ecfeff; color: #155e75; border: 1px solid #a5f3fc; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 12px; }
     .third-party-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 16px; margin: 16px 0; }
     .third-party-card { background: #fff; border: 1px solid #e2e8f0; border-top: 3px solid #7c3aed; border-radius: 10px; padding: 18px 20px; box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+    .third-party-card.gold { border-top-color: #d97706; }
     .third-party-card h3 { font-size: 14px; font-weight: 800; color: #1e293b; margin-bottom: 6px; }
     .third-party-card p { font-size: 12.5px; color: #475569; margin-bottom: 6px; }
     .third-party-card a { font-size: 12px; font-weight: 700; color: #7c3aed; text-decoration: none; }
     .third-party-card a:hover { text-decoration: underline; }
     .ad-chip { display: inline-block; background: linear-gradient(135deg,#6e40cf,#d946ef); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 12px; margin: 2px; }
+    .product-chip { display: inline-block; background: linear-gradient(135deg,#d97706,#f59e0b); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 12px; margin: 2px; }
     .contact-box { background: linear-gradient(135deg,#0d0b1a,#1a0d35); border-radius: 14px; padding: 28px 30px; color: #c4b5fd; }
     .contact-box h3 { font-size: 17px; font-weight: 800; color: #fff; margin-bottom: 12px; }
     .contact-box p { font-size: 14px; margin-bottom: 8px; }
@@ -93,8 +98,8 @@
   <span><strong>App:</strong> Dozen AI</span>
   <span><strong>Package:</strong> com.dozenai.app</span>
   <span><strong>Platform:</strong> Android 7.0+ (API 24)</span>
-  <span><strong>Effective Date:</strong> May 3, 2026</span>
-  <span><strong>Last Updated:</strong> May 4, 2026</span>
+  <span><strong>Effective Date:</strong> May 15, 2026</span>
+  <span><strong>Last Updated:</strong> May 15, 2026</span>
 </div>
 
 <div class="page-header">
@@ -114,6 +119,7 @@
       <li><a href="#data-storage">Data Storage &amp; Retention</a></li>
       <li><a href="#third-party">Third-Party Services</a></li>
       <li><a href="#advertising">Advertising (AdMob)</a></li>
+      <li><a href="#premium-subscriptions">Premium Subscriptions &amp; In-App Purchases</a></li>
       <li><a href="#ai-feedback">AI Feedback Feature</a></li>
       <li><a href="#permissions">App Permissions</a></li>
       <li><a href="#children">Children's Privacy</a></li>
@@ -132,7 +138,9 @@
       to track and maintain consistent daily usage of multiple testing applications. It organises
       tracked apps into named groups (e.g., Alpha, Beta, or any custom name), maintains a day
       counter per group, sends daily reminders, generates AI-powered feedback text for each app,
-      and checks for app updates on the Google Play Store.
+      and checks for app updates on the Google Play Store. The app is free to install and offers
+      an optional <strong>Premium</strong> tier (Lifetime or 6-month subscription) that removes
+      all advertisements and unlocks additional features.
     </p>
     <p>
       This Privacy Policy explains what information Dozen AI collects, why it collects it, how it
@@ -146,7 +154,9 @@
       Core app data — tracked apps, groups, day counts, generated feedback — is stored
       <strong>on your device</strong>. The app transmits limited, anonymous device-level
       analytics to developer-owned Firebase services (described fully in Sections 2–5).
-      No data that could directly identify you as an individual is ever collected.
+      If you purchase a Premium subscription, payment is processed entirely by Google Play
+      Billing — we never see or store your card details (described in Section 7).
+      No data that could directly identify you as an individual is ever collected by the app.
     </div>
   </section>
 
@@ -179,17 +189,24 @@
         </tr>
         <tr>
           <td><strong>User Preferences</strong></td>
-          <td>Reminder on/off toggles, day-start timestamps, onboarding status, update cache</td>
-          <td>Maintain notification settings and group timing across restarts</td>
+          <td>Reminder on/off toggles, day-start timestamps, onboarding status, update cache, language &amp; tone choices for feedback generation</td>
+          <td>Maintain notification settings, group timing, and feedback preferences across restarts</td>
           <td><span class="badge-local">On-device (SharedPrefs)</span></td>
           <td><span class="badge-no">Not Shared</span></td>
         </tr>
         <tr>
           <td><strong>Generated Feedback Text</strong></td>
-          <td>16 day-wise AI-generated feedback sentences per app, stored as text</td>
-          <td>Display in Feedback Viewer; copy to clipboard for testers</td>
-          <td><span class="badge-local">On-device (Files)</span></td>
+          <td>16 day-wise AI-generated feedback sentences per app, stored as text, plus optional cached translations per language</td>
+          <td>Display in Feedback Viewer; copy to clipboard for testers; instant re-display when switching back to a previously used language</td>
+          <td><span class="badge-local">On-device (Files / SharedPrefs)</span></td>
           <td><span class="badge-no">Not Shared</span></td>
+        </tr>
+        <tr>
+          <td><strong>Premium Purchase Receipt</strong></td>
+          <td>Anonymous RevenueCat App User ID, purchased product identifier, original purchase date, expiration date (for the 6-month plan), entitlement status</td>
+          <td>Activate Premium features, remove ads, restore purchases across reinstalls, validate subscription renewals</td>
+          <td><span class="badge-encrypted">On-device (Encrypted)</span> &middot; <span class="badge-billing">RevenueCat</span></td>
+          <td><span class="badge-yes">RevenueCat &amp; Google</span></td>
         </tr>
         <tr>
           <td><strong>Installation Analytics</strong></td>
@@ -207,22 +224,22 @@
         </tr>
         <tr>
           <td><strong>App Analytics Events</strong></td>
-          <td>Standard events: first_open, session_start, screen_view, user_engagement, app_remove. Custom event: get_feedback_used (group name, app count, exceeded-limit flag)</td>
-          <td>Firebase Analytics — understand user engagement, retention, and feature usage at aggregate level</td>
+          <td>Standard events: first_open, session_start, screen_view, user_engagement, app_remove. Custom events: get_feedback_used, premium_purchase, paywall_view</td>
+          <td>Firebase Analytics — understand user engagement, retention, feature usage, and Premium conversion funnel at aggregate level</td>
           <td><span class="badge-firebase">Firebase Analytics (Google)</span></td>
           <td><span class="badge-yes">Google</span></td>
         </tr>
         <tr>
           <td><strong>Advertising ID (GAID)</strong></td>
           <td>Google's resettable, anonymous device-level advertising identifier</td>
-          <td>Collected and used by Google AdMob SDK to serve and personalise advertisements</td>
+          <td>Collected and used by Google AdMob SDK to serve and personalise advertisements (only for free-tier users — Premium users see no ads)</td>
           <td><span class="badge-yes">Google AdMob</span></td>
           <td><span class="badge-yes">Ad Partners</span></td>
         </tr>
         <tr>
           <td><strong>Ad Interaction Data</strong></td>
           <td>Ad impressions, clicks, view-through events</td>
-          <td>Collected by AdMob SDK for ad billing and optimisation</td>
+          <td>Collected by AdMob SDK for ad billing and optimisation (free-tier users only)</td>
           <td><span class="badge-yes">Google AdMob</span></td>
           <td><span class="badge-yes">Google</span></td>
         </tr>
@@ -247,11 +264,11 @@
     <p><strong>We do NOT collect any of the following:</strong></p>
     <ul>
       <li>Your name, email address, phone number, or any account credentials</li>
+      <li>Your credit card number, CVV, billing address, or bank details (Google Play Billing handles all payments — we never receive this information)</li>
       <li>Location, GPS, or IP address data</li>
       <li>Camera, microphone, or media files</li>
       <li>Contacts, calendar, or SMS data</li>
       <li>Biometric data of any kind</li>
-      <li>Financial or payment information (no in-app purchases)</li>
       <li>Any data that could directly identify you as an individual</li>
     </ul>
   </section>
@@ -278,27 +295,39 @@
         information. No user data is transmitted.
       </li>
       <li>
-        <strong>Serving advertisements</strong> — the Google AdMob SDK uses your Advertising
-        ID to display banner, interstitial, app open, native, and rewarded advertisements.
-        Ad revenue helps keep the app free.
+        <strong>Serving advertisements (free tier only)</strong> — the Google AdMob SDK uses
+        your Advertising ID to display banner, interstitial, native, and rewarded
+        advertisements. Ad revenue helps keep the app free. <strong>If you purchase Premium,
+        ads are removed instantly with no app restart required, and the Advertising ID is no
+        longer used by Dozen AI.</strong>
       </li>
       <li>
-        <strong>Rewarded ad gate</strong> — a daily counter (stored in SharedPreferences) tracks
-        "Get Feedback" uses. After 2 free uses, you may watch a rewarded ad for additional uses.
+        <strong>Rewarded ad gate (free tier only)</strong> — a daily counter (stored in
+        SharedPreferences) tracks "Get Feedback" uses. After 2 free uses, you may watch a
+        rewarded ad for additional uses. Premium users have unlimited Get Feedback uses and
+        never see this gate.
+      </li>
+      <li>
+        <strong>Premium subscription activation</strong> — receipt data returned by Google Play
+        Billing through the RevenueCat SDK is used to verify your entitlement, unlock Premium
+        features (zero ads, unlimited Get Feedback, Real Human feedback tone, priority support,
+        lifetime updates), and to restore your purchase across reinstalls or device changes
+        when you sign in to the same Google Play account.
       </li>
       <li>
         <strong>Developer analytics (Firebase)</strong> — anonymous device-level data (install
-        heartbeat, feature usage counts, app version distribution) is sent to the developer's
-        Firebase Realtime Database and Firebase Analytics to understand app health, engagement,
-        and adoption. No PII is included. This data is used solely by the developer for app
-        improvement.
+        heartbeat, feature usage counts, app version distribution, Premium conversion events)
+        is sent to the developer's Firebase Realtime Database and Firebase Analytics to
+        understand app health, engagement, and adoption. No PII is included. This data is used
+        solely by the developer for app improvement.
       </li>
     </ul>
     <div class="info-box">
       We do <strong>not</strong> sell your data. We do <strong>not</strong> share your data
       with any third party for commercial purposes. Firebase Realtime Database data is stored
       in the developer's own project and is not accessible to other third parties. Firebase
-      Analytics data is processed by Google under their own Privacy Policy.
+      Analytics, AdMob, and RevenueCat data is processed by Google and RevenueCat respectively
+      under their own Privacy Policies.
     </div>
   </section>
 
@@ -312,8 +341,9 @@
     </p>
     <p>
       <strong>On-Device SharedPreferences:</strong> Reminder settings, day-start timestamps,
-      onboarding completion flag, and cached Play Store version data are stored in Android
-      SharedPreferences. No personal data is included.
+      onboarding completion flag, cached Play Store version data, language/tone preferences,
+      and feedback translation caches are stored in Android SharedPreferences. No personal
+      data is included.
     </p>
     <p>
       <strong>On-Device Files:</strong> Generated feedback text (up to 16 sentences per tracked
@@ -322,9 +352,8 @@
     <p>
       <strong>Firebase Realtime Database (Developer-Owned):</strong> Anonymous device analytics
       data (install heartbeat, feedback usage counts) are transmitted to the developer's Firebase
-      Realtime Database. Data is stored
-      keyed by Android ID (hex). The developer retains this data indefinitely for analytics
-      purposes. Firebase's infrastructure is operated by Google.
+      Realtime Database. Data is stored keyed by Android ID (hex). The developer retains this
+      data indefinitely for analytics purposes. Firebase's infrastructure is operated by Google.
     </p>
     <p>
       <strong>Firebase Analytics (Google):</strong> Standard and custom analytics events are
@@ -336,11 +365,30 @@
       <strong>AdMob / Google:</strong> The Google AdMob SDK transmits your Advertising ID and
       ad interaction data to Google's servers in accordance with
       <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
+      AdMob is fully disabled for Premium users.
+    </p>
+    <p>
+      <strong>RevenueCat (Subscription Management):</strong> When you initiate a Premium purchase,
+      the RevenueCat SDK creates an anonymous App User ID and forwards your Google Play Billing
+      receipt to RevenueCat servers for validation and entitlement management. RevenueCat stores
+      receipt metadata (product ID, purchase/expiration dates, country, anonymous ID) for as long
+      as your subscription is active and for a reasonable retention period thereafter for refund
+      and fraud-prevention purposes. RevenueCat does <strong>not</strong> receive your name,
+      email, or payment-card details. See
+      <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat's Privacy Policy</a>.
+    </p>
+    <p>
+      <strong>Google Play Billing:</strong> All payment processing — including card details,
+      billing address, tax calculation, and refunds — is handled exclusively by Google Play
+      Billing. Dozen AI never sees or receives any payment information. Data handled by Google
+      Play is governed by
+      <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.
     </p>
     <p>
       <strong>Retention of on-device data:</strong> Retained until you uninstall the app or
       clear app data. Firebase RTDB data is retained by the developer indefinitely but contains
-      no PII and cannot be linked back to an individual without the device.
+      no PII and cannot be linked back to an individual without the device. RevenueCat retains
+      anonymous receipt metadata per its own retention schedule.
     </p>
   </section>
 
@@ -356,7 +404,21 @@
       <div class="third-party-card">
         <h3>Google AdMob</h3>
         <p><em>SDK: play-services-ads 23.6.0</em></p>
-        <p>Displays advertisements (banner, interstitial, app open, native, rewarded video). May collect: Advertising ID (GAID), device model/OS, ad interaction events.</p>
+        <p>Displays advertisements (banner, interstitial, native, rewarded video) for free-tier users only. May collect: Advertising ID (GAID), device model/OS, ad interaction events. Fully disabled for Premium users.</p>
+        <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy &rarr;</a>
+      </div>
+
+      <div class="third-party-card gold">
+        <h3>RevenueCat</h3>
+        <p><em>SDK: com.revenuecat.purchases:purchases 8.10.x</em></p>
+        <p>Manages Premium subscription entitlements and validates Google Play Billing receipts. Receives: anonymous App User ID, product identifier, purchase/expiration timestamps. Does NOT receive name, email, or payment details.</p>
+        <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy &rarr;</a>
+      </div>
+
+      <div class="third-party-card gold">
+        <h3>Google Play Billing</h3>
+        <p><em>Built into Google Play Services</em></p>
+        <p>Handles all payment processing for Premium subscriptions. Receives: card details, billing address, tax info (only by Google — never by Dozen AI). Returns only a signed receipt token to the app.</p>
         <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy &rarr;</a>
       </div>
 
@@ -370,7 +432,7 @@
       <div class="third-party-card">
         <h3>Firebase Analytics</h3>
         <p><em>SDK: firebase-analytics (BOM 33.7.0). Developer-owned project: dozenai</em></p>
-        <p>Tracks standard engagement events (first_open, session_start, screen_view) and one custom event: <em>get_feedback_used</em> (group name, app count, limit-exceeded flag). No PII is included.</p>
+        <p>Tracks standard engagement events (first_open, session_start, screen_view) plus custom events: <em>get_feedback_used</em>, <em>premium_purchase</em>, <em>paywall_view</em>. No PII is included.</p>
         <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy &rarr;</a>
       </div>
 
@@ -384,7 +446,7 @@
       <div class="third-party-card">
         <h3>AndroidX WorkManager</h3>
         <p><em>SDK: androidx.work:work-runtime-ktx 2.9.1</em></p>
-        <p>Used to schedule periodic background reminder checks. On-device only — does not transmit any data to external servers.</p>
+        <p>Used to schedule periodic background reminder checks and a daily Premium-entitlement refresh worker that re-syncs subscription status with RevenueCat. On-device scheduler — initiates no untracked network traffic of its own.</p>
         <a href="https://developer.android.com/topic/libraries/architecture/workmanager" target="_blank">WorkManager Docs &rarr;</a>
       </div>
 
@@ -395,20 +457,22 @@
   <section id="advertising">
     <h2><span class="num">6</span> Advertising (AdMob)</h2>
     <p>
-      Dozen AI is a free app supported by advertising through <strong>Google AdMob</strong>.
-      The following ad formats are used:
+      Dozen AI is free to install. The free tier is supported by advertising through
+      <strong>Google AdMob</strong>. <strong>Premium users do not see any advertisements at all</strong>
+      — banner, interstitial, native, and rewarded ad units are all disabled the
+      moment Premium activates (no app restart required), and the Advertising ID is no longer
+      consumed by Dozen AI for ad serving.
     </p>
+    <p>The following ad formats are used for free-tier users:</p>
     <p>
       <span class="ad-chip">Banner</span>
       <span class="ad-chip">Interstitial</span>
-      <span class="ad-chip">App Open</span>
       <span class="ad-chip">Native</span>
       <span class="ad-chip">Rewarded Video</span>
     </p>
     <ul style="margin-top:14px">
       <li><strong>Banner ads</strong> appear at the bottom of the main screen, group room, and feedback viewer.</li>
       <li><strong>Interstitial ads</strong> appear before the Feedback Viewer opens.</li>
-      <li><strong>App Open ads</strong> appear on cold start (10-minute cooldown between shows).</li>
       <li><strong>Native ads</strong> appear inline after every 3 group tiles on the main screen, and after every 4 feedback day-cards in the Feedback Viewer.</li>
       <li><strong>Rewarded video ads</strong> are optional — watch one to unlock additional "Get Feedback" uses after your 2 free daily uses are exhausted.</li>
     </ul>
@@ -423,13 +487,74 @@
     </ol>
     <div class="info-box">
       The app does not show ads during active feedback generation or during Google sign-in
-      for generating feedback of Apps.
+      for generating feedback of Apps. Purchasing Premium removes ads completely and
+      permanently for your account.
     </div>
   </section>
 
-  <!-- 7. AI Feedback Feature -->
+  <!-- 7. Premium Subscriptions & In-App Purchases -->
+  <section id="premium-subscriptions">
+    <h2><span class="num">7</span> Premium Subscriptions &amp; In-App Purchases</h2>
+    <p>
+      Dozen AI offers an optional <strong>Premium</strong> tier that removes all advertisements
+      and unlocks additional features. Two Premium products are available, both sold exclusively
+      through <strong>Google Play Billing</strong>:
+    </p>
+    <p>
+      <span class="product-chip">Lifetime — one-time purchase</span>
+      <span class="product-chip">6-Month Subscription</span>
+    </p>
+    <p><strong>Premium unlocks the following:</strong></p>
+    <ul>
+      <li>Zero ads forever — all banner, interstitial, native, and rewarded ad units are disabled.</li>
+      <li>Unlimited "Get Feedback" uses — no daily limit, no rewarded-ad gate.</li>
+      <li>Real Human feedback tone — an additional AI feedback tone exclusive to Premium.</li>
+      <li>Highest priority support — your support email is routed to the priority queue.</li>
+      <li>Lifetime updates &amp; new features.</li>
+    </ul>
+
+    <div class="gold-box">
+      <strong>Payment processing is handled entirely by Google Play Billing.</strong>
+      Dozen AI <strong>never</strong> sees, stores, or transmits your card number, CVV, expiry
+      date, billing address, or any other payment information. Google issues a signed receipt
+      token to the app, which is then validated by RevenueCat (our subscription-management
+      provider) to activate your Premium entitlement.
+    </div>
+
+    <p><strong>What gets sent to RevenueCat:</strong></p>
+    <ul>
+      <li>An anonymous RevenueCat App User ID (generated locally — not linked to your name or email).</li>
+      <li>The Google Play receipt token (product identifier, purchase token, anonymized purchase metadata).</li>
+      <li>Device model, OS version, app version (for diagnostic purposes).</li>
+    </ul>
+
+    <p><strong>What does NOT get sent to RevenueCat or the developer:</strong></p>
+    <ul>
+      <li>Your name, email address, phone number, or any Google account identifier.</li>
+      <li>Your credit/debit card number, CVV, expiration date, or billing address.</li>
+      <li>Your physical address (beyond the country code Google attaches to the receipt for tax purposes).</li>
+    </ul>
+
+    <p><strong>Subscription management:</strong></p>
+    <ul>
+      <li><strong>Auto-renewal:</strong> The 6-month subscription auto-renews every 6 months through Google Play unless cancelled at least 24 hours before the renewal date. The Lifetime product is a one-time purchase and never renews.</li>
+      <li><strong>Manage / cancel:</strong> Open the <strong>Google Play Store app</strong> &rarr; profile icon &rarr; <strong>Payments &amp; subscriptions</strong> &rarr; <strong>Subscriptions</strong> &rarr; tap <strong>Dozen AI</strong> &rarr; <strong>Cancel subscription</strong>. Premium access remains until the end of the paid period.</li>
+      <li><strong>Restore purchases:</strong> Premium is tied to your Google Play account. After reinstalling the app or signing in on a new device, tap <strong>Restore Purchases</strong> inside the in-app paywall. RevenueCat will re-verify your entitlement with Google Play Billing and re-activate Premium automatically.</li>
+      <li><strong>Refunds:</strong> Refund requests are handled by Google Play under their refund policy. Open Google Play &rarr; Account &rarr; Order history &rarr; locate the Dozen AI purchase &rarr; tap <strong>Refund</strong> (or contact Google Play support). RevenueCat automatically detects refunds and revokes your Premium entitlement within minutes.</li>
+      <li><strong>Subscription expiration / cancellation:</strong> A daily background worker re-validates your entitlement with RevenueCat. If your subscription has expired, been cancelled, or been refunded, Premium features are deactivated and the local receipt cache is cleared.</li>
+    </ul>
+
+    <div class="info-box">
+      Premium activation is <strong>reactive</strong> — the moment Google Play returns a valid
+      receipt, ads disappear and unlimited Get Feedback unlocks without any app restart. If
+      RevenueCat or Google Play later signals that your subscription has lapsed or been
+      refunded, Premium features deactivate just as cleanly.
+    </div>
+  </section>
+
+  <!-- 8. AI Feedback Feature -->
   <section id="ai-feedback">
-    <h2><span class="num">7</span> AI Feedback Feature</h2>
+    <h2><span class="num">8</span> AI Feedback Feature</h2>
     <p>
       The "Get Feedback" feature generates 16 day-wise feedback sentences for each tracked app
       using AI. Data flow:
@@ -442,11 +567,15 @@
       </li>
       <li>
         <strong>Prompt submission:</strong> The app submits an AI feedback prompt on your behalf
-        using your authenticated session. No personal information is included in the prompt.
+        using your authenticated session. You may choose a language (30 options) and a tone
+        (Standard, or Real Human — Premium only). No personal information is included in the
+        prompt.
       </li>
       <li>
         <strong>Storage of response:</strong> The 16 feedback sentences are stored locally on
-        your device. They are never uploaded to any server.
+        your device. They are never uploaded to any server. Translations to additional
+        languages are cached locally and reused instantly when you switch back to a previously
+        used language (no further AI calls required).
       </li>
       <li>
         <strong>Usage analytics:</strong> After each "Get Feedback" use, an anonymous event is
@@ -461,24 +590,25 @@
     </div>
   </section>
 
-  <!-- 8. Permissions -->
+  <!-- 9. Permissions -->
   <section id="permissions">
-    <h2><span class="num">8</span> App Permissions</h2>
+    <h2><span class="num">9</span> App Permissions</h2>
     <p>Dozen AI requests the following Android permissions:</p>
     <table class="perm-table">
       <thead><tr><th>Permission</th><th>Why It Is Needed</th></tr></thead>
       <tbody>
-        <tr><td><span class="perm-name">INTERNET</span></td><td>Required for AdMob ads, Firebase analytics, app version checking, and Google sign-in for generating feedback of Apps.</td></tr>
+        <tr><td><span class="perm-name">INTERNET</span></td><td>Required for AdMob ads, Firebase analytics, app version checking, Google sign-in for generating feedback of Apps, and RevenueCat / Google Play Billing receipt validation.</td></tr>
         <tr><td><span class="perm-name">ACCESS_NETWORK_STATE</span></td><td>Checks network connectivity before any network request.</td></tr>
+        <tr><td><span class="perm-name">com.android.vending.BILLING</span></td><td>Required by Google Play Billing to offer and process Premium subscription purchases (Lifetime and 6-month). Declared automatically by the Play Billing client.</td></tr>
         <tr><td><span class="perm-name">POST_NOTIFICATIONS</span> (API 33+)</td><td>Displays daily reminder notifications. Requested at runtime — can be denied or revoked at any time.</td></tr>
         <tr><td><span class="perm-name">RECEIVE_BOOT_COMPLETED</span></td><td>Restores scheduled reminder alarms after device restart.</td></tr>
         <tr><td><span class="perm-name">FOREGROUND_SERVICE</span></td><td>Runs background tracking service with persistent notification, as required by Android policy.</td></tr>
         <tr><td><span class="perm-name">FOREGROUND_SERVICE_DATA_SYNC</span></td><td>Declares foreground service type for Android 14+ compliance.</td></tr>
         <tr><td><span class="perm-name">REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</span></td><td>Ensures reminders fire reliably rather than being deferred by Doze mode.</td></tr>
         <tr><td><span class="perm-name">SCHEDULE_EXACT_ALARM</span> / <span class="perm-name">USE_EXACT_ALARM</span></td><td>Schedules precise alarm times for reminder notifications.</td></tr>
-        <tr><td><span class="perm-name">WAKE_LOCK</span></td><td>Required by AndroidX WorkManager for background reminder scheduling.</td></tr>
+        <tr><td><span class="perm-name">WAKE_LOCK</span></td><td>Required by AndroidX WorkManager for background reminder scheduling and the daily Premium-entitlement refresh worker.</td></tr>
         <tr><td><span class="perm-name">VIBRATE</span></td><td>Enables vibration for reminder notifications.</td></tr>
-        <tr><td><span class="perm-name">com.google.android.gms.permission.AD_ID</span></td><td>Required by Google AdMob SDK to access the Android Advertising ID for ad personalisation. You can reset or opt out in Android Settings &rarr; Privacy &rarr; Ads.</td></tr>
+        <tr><td><span class="perm-name">com.google.android.gms.permission.AD_ID</span></td><td>Required by Google AdMob SDK to access the Android Advertising ID for ad personalisation (free tier only — unused for Premium users). You can reset or opt out in Android Settings &rarr; Privacy &rarr; Ads.</td></tr>
       </tbody>
     </table>
     <p>
@@ -487,9 +617,9 @@
     </p>
   </section>
 
-  <!-- 9. Children -->
+  <!-- 10. Children -->
   <section id="children">
-    <h2><span class="num">9</span> Children's Privacy</h2>
+    <h2><span class="num">10</span> Children's Privacy</h2>
     <p>
       Dozen AI is designed and intended for use by <strong>app developers and testers aged 13
       and above</strong>. It is a professional productivity tool not directed at, designed for,
@@ -498,7 +628,9 @@
     <p>
       We do not knowingly collect any personal information from children under 13. If you are
       a parent or guardian and believe your child has used this app, contact us using the
-      details in Section 13.
+      details in Section 14. In-app purchases (Premium subscriptions) are protected by Google
+      Play's parental controls; we recommend enabling purchase authentication on any device
+      used by a minor.
     </p>
     <p>
       In accordance with <strong>COPPA</strong> and <strong>Google Play's Families Policy</strong>,
@@ -506,46 +638,52 @@
     </p>
   </section>
 
-  <!-- 10. Your Rights -->
+  <!-- 11. Your Rights -->
   <section id="your-rights">
-    <h2><span class="num">10</span> Your Rights &amp; Choices</h2>
+    <h2><span class="num">11</span> Your Rights &amp; Choices</h2>
     <p>You have full control over the data Dozen AI stores:</p>
     <ul>
-      <li><strong>Delete all on-device data:</strong> Uninstall the app, or go to Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Storage &rarr; "Clear Data".</li>
+      <li><strong>Delete all on-device data:</strong> Uninstall the app, or go to Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Storage &rarr; "Clear Data". Note: this also clears the local Premium receipt cache — tap <strong>Restore Purchases</strong> after reinstall to re-activate Premium.</li>
       <li><strong>Opt out of Firebase analytics:</strong> Firebase analytics collection is tied to the app. To stop it, uninstall the app. There is no in-app toggle, as the data collected is anonymous and non-PII.</li>
       <li><strong>Revoke notification permission:</strong> Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Notifications &rarr; toggle off.</li>
-      <li><strong>Opt out of personalised ads:</strong> Android Settings &rarr; Privacy (or Google) &rarr; Ads &rarr; "Opt out of Ads Personalisation".</li>
+      <li><strong>Opt out of personalised ads:</strong> Android Settings &rarr; Privacy (or Google) &rarr; Ads &rarr; "Opt out of Ads Personalisation". (Or purchase Premium to remove ads entirely.)</li>
       <li><strong>Reset your Advertising ID:</strong> Android Settings &rarr; Privacy (or Google) &rarr; Ads &rarr; "Reset Advertising ID".</li>
-	  <li><strong>Delete Feedback Data:</strong> Contact us at the email below to request deletion of your Feedback Feature usage records from Firebase. We will process your request within 30 days.</li>
+      <li><strong>Restore Premium purchase:</strong> Inside the in-app paywall, tap <strong>Restore Purchases</strong>. RevenueCat will re-verify your entitlement with Google Play Billing on the Google account currently signed into the Play Store on your device.</li>
+      <li><strong>Cancel a Premium subscription:</strong> Open the Google Play Store app &rarr; profile icon &rarr; <strong>Payments &amp; subscriptions</strong> &rarr; <strong>Subscriptions</strong> &rarr; tap <strong>Dozen AI</strong> &rarr; <strong>Cancel subscription</strong>. Premium remains active until the end of the current paid period.</li>
+      <li><strong>Request a Premium refund:</strong> Refunds are handled by Google Play under their refund policy. Open Google Play &rarr; Account &rarr; Order history &rarr; Dozen AI &rarr; <strong>Refund</strong>, or contact Google Play support. Premium is revoked automatically once the refund is processed.</li>
+      <li><strong>Delete Feedback Data:</strong> Contact us at the email below to request deletion of your Feedback Feature usage records from Firebase. We will process your request within 30 days.</li>
       <li><strong>Sign out of Google Account (AI Feedback):</strong> From within the app's sign-in settings, or by clearing app data.</li>
       <li><strong>Disable battery optimisation exemption:</strong> Android Settings &rarr; Apps &rarr; Dozen AI &rarr; Battery &rarr; "Optimised".</li>
     </ul>
   </section>
 
-  <!-- 11. Data Security -->
+  <!-- 12. Data Security -->
   <section id="data-security">
-    <h2><span class="num">11</span> Data Security</h2>
+    <h2><span class="num">12</span> Data Security</h2>
     <p>We apply the following security measures:</p>
     <ul>
-      <li>All network communications — AdMob requests, Firebase RTDB writes, Firebase Analytics events, version checking, Google sign-in — use <strong>HTTPS/TLS encryption</strong>.</li>
+      <li>All network communications — AdMob requests, Firebase RTDB writes, Firebase Analytics events, version checking, Google sign-in, RevenueCat receipt validation, and Google Play Billing transactions — use <strong>HTTPS/TLS encryption</strong>.</li>
       <li>Firebase RTDB security rules enforce write-only access from devices (no device can read back any other device's data) and validate all field types and sizes before accepting writes.</li>
       <li>On-device data (Room database, SharedPreferences, feedback files) is stored in the app's private storage, inaccessible to other apps on a non-rooted device.</li>
+      <li>Payment details never touch Dozen AI's process — all card data is captured and processed inside Google Play Billing's secure flow.</li>
     </ul>
     <div class="warn-box">
       No method of data storage or transmission is 100% secure. We cannot guarantee absolute
-      security of data handled by third-party SDKs (AdMob, Firebase Analytics, WebView) which
-      are governed by their own security practices. Firebase RTDB stores only anonymous,
-      non-PII data, minimising the impact of any theoretical breach.
+      security of data handled by third-party SDKs (AdMob, Firebase Analytics, RevenueCat,
+      Google Play Billing, WebView) which are governed by their own security practices.
+      Firebase RTDB stores only anonymous, non-PII data, minimising the impact of any
+      theoretical breach.
     </div>
   </section>
 
-  <!-- 12. Changes -->
+  <!-- 13. Changes -->
   <section id="changes">
-    <h2><span class="num">12</span> Changes to This Policy</h2>
+    <h2><span class="num">13</span> Changes to This Policy</h2>
     <p>
       We may update this Privacy Policy from time to time as the app evolves. When we do, we
-      will update the "Last Updated" date at the top of this page. If the changes are material,
-      we will note them in the Google Play Store update release notes.
+      will update the "Last Updated" date at the top of this page. If the changes are material
+      (e.g., introduction of new data categories or third-party services), we will note them
+      in the Google Play Store update release notes.
     </p>
     <p>
       We encourage you to review this policy periodically. Continued use of Dozen AI after
@@ -553,9 +691,9 @@
     </p>
   </section>
 
-  <!-- 13. Contact -->
+  <!-- 14. Contact -->
   <section id="contact">
-    <h2><span class="num">13</span> Contact Us</h2>
+    <h2><span class="num">14</span> Contact Us</h2>
     <div class="contact-box">
       <h3>Questions about your privacy?</h3>
       <p>If you have questions, concerns, or requests regarding this Privacy Policy or the
@@ -563,9 +701,11 @@
       <p><strong>App Name:</strong> Dozen AI</p>
       <p><strong>Package:</strong> com.dozenai.app</p>
       <p><strong>Developer / Publisher:</strong> [EPICMIND LABS]</p>
-      <p><strong>Email:</strong> <a href="mailto:EPICMINDLABS@Gmail.com">EPICMINDLABS@Gmail.com</a></p>
+      <p><strong>Email:</strong> <a href="mailto:EPICMINDLABS@GMAIL.COM">EPICMINDLABS@GMAIL.COM</a></p>
       <p style="margin-top:12px;font-size:13px;color:#a78bfa">
         We will respond to all privacy-related enquiries within <strong style="color:#e9d5ff">30 days</strong>.
+        For Premium subscription, refund, or billing issues, please also contact Google Play
+        support — Google handles all payment processing.
       </p>
     </div>
   </section>
@@ -576,7 +716,7 @@
   <p>
     &copy; 2026 <span>Dozen AI</span> &nbsp;&middot;&nbsp;
     <span>com.dozenai.app</span> &nbsp;&middot;&nbsp;
-    Privacy Policy last updated May 4, 2026
+    Privacy Policy last updated May 15, 2026
   </p>
 </footer>
 
